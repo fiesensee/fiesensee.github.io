@@ -1,0 +1,43 @@
+.app {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    flex: 1;
+}
+
+.sidebar {
+    order: -1;
+    flex: 0 0 8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #607d8b;
+
+    button {
+        margin-bottom: 2em;
+        background-color: inherit;
+        border: none;
+        outline: none;
+
+        .active {
+            color: #ffffff;
+            
+        }
+
+        i {
+            font-size: 36px;
+            color: #9e9e9e;          
+        }
+    }
+}
+
+
+
+.content {
+    flex: 1;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+}
+
