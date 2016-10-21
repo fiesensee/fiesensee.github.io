@@ -1,3 +1,25 @@
-<h1>
+<!--<h1>
   {{title}}
-</h1>
+</h1>-->
+<div class="app" [ngSwitch]="page">
+  <nav class="sidebar">
+    <button (click)="changeContent('home')" type="button"><i [ngClass]="{active: states.home}" class="material-icons">home</i></button>
+    <button (click)="changeContent('projects')" type="button"><i [ngClass]="{active: states.projects}" class="material-icons">code</i></button>
+    <button (click)="changeContent('blog')" type="button"><i [ngClass]="{active: states.blog}" class="material-icons">rss_feed</i></button>
+  </nav>
+  <main class="content">
+    <div *ngSwitchCase="'projects'">
+      <h1>projects</h1>
+      <app-projects></app-projects>
+    </div>
+    <div *ngSwitchCase="'blog'">
+      <h1>blog</h1>
+      <app-blog></app-blog>
+    </div>
+    <div *ngSwitchCase="'home'">
+      <h1>home</h1>
+      <app-home></app-home>
+    </div>
+  </main>
+  
+</div>
